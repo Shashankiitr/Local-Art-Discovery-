@@ -1,0 +1,18 @@
+{
+  "name": "local-art-discovery-",
+  "version": "1.0.0",
+  "description": "This market place enable artists to mint location-specific NFTs, allowing users to discover and collect digital art associated with specific places in the campus.",
+  "main": "index.js",
+  "scripts": {
+    "test": "chalu karo"
+  },
+  "author": "Capslule-Corporation",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1"
+  }
+}
