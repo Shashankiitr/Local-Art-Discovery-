@@ -123,7 +123,7 @@ contract LocalAryDiscovery is ERC721URIStorage {
         uint256 price = idToMarketItem[tokenId].price;
         //uint256 tokenId = idToMarketItem[tokenId].tokenId;
 
-        require(msg.value == price, "Please submit the asking price in order to complete the purchase");
+        require(msg.value == price, "Please submit the asking price in order to cnpm omplete the purchase");
 
         // //transfer the token to the buyer
         // idToMarketItem[tokenId].seller.transfer(msg.value);
