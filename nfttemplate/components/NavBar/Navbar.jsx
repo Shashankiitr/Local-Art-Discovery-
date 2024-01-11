@@ -1,17 +1,25 @@
 import React, {useState, useEffect} from "react";
-import image from "next/image";
-// import Link from "next/link";
+import Image from "next/image";
+import Link from "next/link";
 
 
-import { MdNotifications } from "react-icons/md";
-import { BsSearch } from "react-icons/bs";
+import {MdNotifications}  from "react-icons/md";
+import  {BsSearch}  from "react-icons/bs";
 import { CgMenuLeft, CgMenuRight } from "react-icons/cg";
 
 
-import {Style} from "./Navbar.module.css";
-import {Discover, Helpcentre, Notification, Profile, Sidebar} from "./index"
-import {Button} from "../componentindex";  
-import {images} from "../../img/index";
+import Style from "./Navbar.module.css";
+//import {Discover, Helpcentre, Notification, Profile, Sidebar} from "./index"
+import Discover from "./Discover/Discover";
+import Helpcentre from "./HelpCentre/HelpCentre";
+import Notification from "./Notification/Notification";
+import Profile from "./Profile/Profile";
+import Sidebar from "./Sidebar/Sidebar";
+
+//import {Button} from "../componentindex";  
+import Button from "../Button/Button";
+//import {images} from "../../img/index";
+import images from "../../img/index";
 
 const Navbar = () => {
 
@@ -32,8 +40,8 @@ const Navbar = () => {
       setProfile(false);
     }
     else if(btnText === "Help Centre"){
-      setDiscover(false);
       setHelp(true);
+      setDiscover(false);
       setNotification(false);
       setProfile(false);
     }
@@ -87,7 +95,7 @@ const Navbar = () => {
         {/* Left Section */}
         <div className={Style.navbar_container_left}>
           <div className={Style.logo}>
-            <image src={images.logo} alt="NFT art" width={100} height={100} />
+            <Image src={images.logo} alt="NFT art" width={100} height={100} />
           </div>
           <div className={Style.navbar_container_left_box_input}>
               <div className={Style.navbar_container_left_box_input_box}>
@@ -139,10 +147,10 @@ const Navbar = () => {
           {/* Profile Component */}
           <div className={Style.navbar_container_right_profile_box}>
               <div className={Style.navbar_container_right_profile}>
-                <image src={images.user1} alt="NFT Profile" width={40} height={40} onClick = {() => openProfile()} className={Style.navbar_container_right_profile}/>
-                if(profile && (
+                <Image src={images.user1} alt="NFT Profile" width={40} height={40} onClick = {() => openProfile()} className={Style.navbar_container_right_profile}/>
+                {profile && (
                   <Profile />
-                ))
+                )}
               </div>
           </div> 
 
